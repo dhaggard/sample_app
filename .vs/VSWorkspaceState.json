@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\assets",
+    "\\app\\assets\\images",
+    "\\app\\assets\\stylesheets",
+    "\\app\\controllers",
+    "\\app\\helpers",
+    "\\app\\views",
+    "\\app\\views\\layouts",
+    "\\app\\views\\static_pages"
+  ],
+  "SelectedNode": "\\app\\assets\\images",
+  "PreviewInSolutionExplorer": false
+}
