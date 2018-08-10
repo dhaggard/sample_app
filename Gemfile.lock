@@ -41,7 +41,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (8.0.0)
-    autoprefixer-rails (9.0.2)
+    autoprefixer-rails (9.1.0)
       execjs
     bcrypt (3.1.12)
     bcrypt (3.1.12-x86-mingw32)
@@ -140,10 +140,10 @@ GEM
       builder
       excon (~> 0.58)
       formatador (~> 0.2)
-    fog-digitalocean (0.3.0)
-      fog-core (~> 1.42)
-      fog-json (>= 1.0)
-      fog-xml (>= 0.1)
+    fog-digitalocean (0.4.0)
+      fog-core
+      fog-json
+      fog-xml
       ipaddress (>= 0.5)
     fog-dnsimple (1.0.0)
       fog-core (~> 1.38)
@@ -297,8 +297,7 @@ GEM
       shellany (~> 0.0)
     ovirt-engine-sdk (4.2.4)
       json (>= 1, < 3)
-    pg (0.20.0)
-    pg (0.20.0-x86-mingw32)
+    pg (0.10.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -354,7 +353,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    ruby-progressbar (1.9.0)
+    ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
@@ -432,7 +431,7 @@ DEPENDENCIES
   mini_magick (= 4.7.0)
   minitest (= 5.10.3)
   minitest-reporters (= 1.1.14)
-  pg (= 0.20.0)
+  pg (= 0.10.0)
   puma (= 3.9.1)
   rails (= 5.1.6)
   rails-controller-testing (= 1.0.2)
