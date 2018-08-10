@@ -21,7 +21,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   #test "name validation should reject nonalphabetic" do
-  #  invalid_names = %w[Bob1 Jim\*]
+  #  invalid_names = %w[Bob1 Jim*]
   #  invalid_names.each do |invalid_name|
   #    @user.name = invalid_name
   #    assert_not @user.valid?, "#{invalid_name} should be invalid"
@@ -78,5 +78,5 @@ class UserTest < ActiveSupport::TestCase
   test "password should have a minimum length" do
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
-  end
+  end 
 end
