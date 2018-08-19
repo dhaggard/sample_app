@@ -12,7 +12,7 @@ class User < ApplicationRecord
   
   has_secure_password
   
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   
   # another way of saying
   # def User.digest(string) or self.digest(string) or
@@ -28,7 +28,7 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
-  end
+  end # end class << self
   
   def remember
     self.remember_token = User.new_token

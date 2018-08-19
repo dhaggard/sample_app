@@ -50,4 +50,14 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     log_in_as(@user, remember_me: '0')
     assert_empty cookies['remember_token']
   end
+
+  test "default login when not using friendly forwarding" do
+    get edit_user_path(@user)
+    log_in_as(@user)
+    assert_redirected_to edit_user_path(@user)
+    delete logout_path
+    assert_nil session[:forwarding_url]
+    log_in_as(@user)
+    assert_redirected_to @user
+  end
 end
