@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?('')
+    assert_not @user.authenticated?(:remember, '')
   end
 
   test "should be valid" do
@@ -23,14 +23,6 @@ class UserTest < ActiveSupport::TestCase
     @user.name = "a" * 51
     assert_not @user.valid?
   end
-
-  #test "name validation should reject nonalphabetic" do
-  #  invalid_names = %w[Bob1 Jim*]
-  #  invalid_names.each do |invalid_name|
-  #    @user.name = invalid_name
-  #    assert_not @user.valid?, "#{invalid_name} should be invalid"
-  #  end
-  #end
 
   test "email should be present" do
     @user.email = "     "
